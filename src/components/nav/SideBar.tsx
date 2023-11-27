@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import styles from "./sidebar.module.scss";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import LocaleSwitcher from "../common/LocaleSwitcher";
 
 export const SideBar = () => {
   const [selected, setSelected] = useState("");
+
   // const t = useTranslations("Index");
 
   useEffect(() => {
@@ -80,6 +81,8 @@ export const SideBar = () => {
       >
         Contact
       </motion.a>
+
+      <LocaleSwitcher />
     </motion.nav>
   );
 };

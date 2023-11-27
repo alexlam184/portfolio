@@ -1,9 +1,16 @@
 {
+  "LocaleLayout": {
+    "title": "Semtron - hardware training talent"
+  },
   "Index": {
     "title": "你好!"
   },
   "nav": {
     "about": "about",
     "": ""
+  },
+  "NotFoundPage": {
+    "title": "找不到網頁",
+    "description": "404 這則訊息代表 Google Chrome 無法找到及載入您嘗試造訪的網頁。"
   }
 }

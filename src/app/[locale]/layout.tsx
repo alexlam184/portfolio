@@ -1,36 +1,51 @@
 import "@/app/globals.css";
-import { useLocale } from "next-intl";
+import React from "react";
 import { notFound } from "next/navigation";
-import { Poppins } from "next/font/google";
-import Head from "next/head";
+import { createTranslator, NextIntlClientProvider } from "next-intl";
+import { ReactNode } from "react";
+// import { NextUIProvider } from "@nextui-org/react";
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
+};
 
-const poppins = Poppins({
-  weight: ["100", "200", "400", "700", "900"],
-  subsets: ["latin"],
-});
-export default function LocaleLayout({
+export async function generateMetadata({ params: { locale } }: Props) {
+  const messages = (await import(`@/messages/${locale}.json`)).default;
+
+  // You can use the core (non-React) APIs when you have to use next-intl
+  // outside of components. Potentially this will be simplified in the future
+  // (see https://next-intl-docs.vercel.app/docs/next-13/server-components).
+  const t = createTranslator({ locale, messages });
+
+  return {
+    title: t("LocaleLayout.title"),
+  };
+}
+
+export default async function LocaleLayout({
   children,
-  params,
-}: {
-  children: JSX.Element;
-  params: any;
-}) {
-  const locale = useLocale();
-
-  // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
+  params: { locale },
+}: Props) {
+  let messages;
+  try {
+    messages = (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
     notFound();
   }
 
   return (
-    <html lang={locale} className={poppins.className}>
-      <Head>
-        <title>Bob Ross | Web Developer</title>
-        <meta name="description" content="Bleep boop" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <body>{children}</body>
+    <html className="h-full" lang={locale}>
+      <body
+        className="flex h-full flex-col"
+        // suppressHydrationWarning={true}
+      >
+        {/**NextIntlClientProvider for client component */}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {/* <NextUIProvider> */}
+          {children}
+          {/* </NextUIProvider> */}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

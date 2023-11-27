@@ -6,9 +6,15 @@ import { Projects } from "@/components/home/projects/Projects";
 import { Heading } from "@/components/nav/Heading";
 import { SideBar } from "@/components/nav/SideBar";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 import styles from "./home.module.scss";
 
-export default function Index() {
+export default function Index({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("Index");
   return (
     <>
