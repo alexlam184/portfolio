@@ -56,8 +56,7 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## Acknowledgements
 
-- [next-i18next](https://github.com/isaachinman/next-i18next)
-- [react-i18next](https://react.i18next.com/)
+- [next-intl](https://next-intl-docs.vercel.app)
 - [Code formatting](https://gist.github.com/silver-xu/1dcceaa14c4f0253d9637d4811948437)
 - [husky](https://typicode.github.io/husky/#/)
 - [react icon](https://react-icons.github.io/react-icons/)
@@ -101,7 +100,7 @@ only use `lg:` is ok,the rest will be marked as small screen
 
 ```ts
 // min screen width will be 10/12 of full screen (phone) , big screen wiil be width 100% (desktop)
-<div className='absolute top-0 left-0 w-10/12 lg:w-full h-screen bg-white text-black z-40  lg:relative lg:w-full lg:h-full'>
+<div className='absolute top-0 left-0 w-10/12  h-screen bg-white text-black z-40  lg:relative lg:w-full lg:h-full'>
   ...
 </div>
 ```
@@ -112,4 +111,4 @@ only use `lg:` is ok,the rest will be marked as small screen
 
 [MIT](https://github.com/alexlam184/portfolio/blob/master/LICENSE)
 
-_2023-02-18_
+_2023-11-27_
