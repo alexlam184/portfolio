@@ -3,7 +3,6 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
-// import { NextUIProvider } from "@nextui-org/react";
 type Props = {
   children: ReactNode;
   params: { locale: string };
@@ -18,7 +17,12 @@ export async function generateMetadata({ params: { locale } }: Props) {
   const t = createTranslator({ locale, messages });
 
   return {
-    title: t("LocaleLayout.title"),
+    title: `Alex Lam - ${t("LocaleLayout.title")}`,
+    description: "building shit with dream",
+    icons: [
+      { rel: "icon", url: "/icon.png" },
+      { rel: "apple", url: "/icon.png" },
+    ],
   };
 }
 
@@ -41,9 +45,7 @@ export default async function LocaleLayout({
       >
         {/**NextIntlClientProvider for client component */}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* <NextUIProvider> */}
           {children}
-          {/* </NextUIProvider> */}
         </NextIntlClientProvider>
       </body>
     </html>
