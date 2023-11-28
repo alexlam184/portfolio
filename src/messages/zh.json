@@ -1,16 +1,22 @@
 {
   "LocaleLayout": {
-    "title": "Semtron - hardware training talent"
-  },
-  "Index": {
-    "title": "你好!"
+    "title": "Alex Lam - 全端程式員"
   },
   "nav": {
-    "about": "about",
-    "": ""
+    "about": "關於"
   },
   "NotFoundPage": {
     "title": "找不到網頁",
     "description": "404 這則訊息代表 Google Chrome 無法找到及載入您嘗試造訪的網頁。"
+  },
+  "IndexPage": {
+    "hero": {
+      "name": "Alex Lam",
+      "title": "全端工程師",
+      "description": "在過去的三年裡，我一直在為一些非常酷的公司建立和擴展軟體。 我還教學生STEM知識（科學與程式設計🤖）。 讓聯絡我吧！"
+    },
+    "aboutme": {
+      "content": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+    }
   }
 }

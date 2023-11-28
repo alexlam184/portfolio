@@ -2,19 +2,21 @@
   "LocaleLayout": {
     "title": "Alex - Real life story writer"
   },
-  "Index": {
-    "title": "Hello world!"
-  },
   "nav": {
-    "about": "about",
-    "": ""
-  },
-  "aboutme": {
-    "name": "Alex Lam",
-    "content": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+    "about": "about"
   },
   "NotFoundPage": {
     "title": "Page not found",
     "description": "404. The requested URL was not found on this server"
+  },
+  "IndexPage": {
+    "hero": {
+      "name": "Alex Lam",
+      "title": "Full Stack Developer",
+      "description": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+    },
+    "aboutme": {
+      "content": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+    }
   }
 }

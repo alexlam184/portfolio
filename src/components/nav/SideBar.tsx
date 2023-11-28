@@ -7,8 +7,6 @@ import LocaleSwitcher from "../common/LocaleSwitcher";
 export const SideBar = () => {
   const [selected, setSelected] = useState("");
 
-  // const t = useTranslations("Index");
-
   useEffect(() => {
     const sections = document.querySelectorAll(".section-wrapper");
 

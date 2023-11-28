@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { StandardButton } from "@/components/common/buttons/StandardButton";
 import { locales } from "@/constant/constant";
 
