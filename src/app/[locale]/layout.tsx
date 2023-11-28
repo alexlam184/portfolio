@@ -3,6 +3,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
+import { Providers } from "@/app/providers";
 type Props = {
   children: ReactNode;
   params: { locale: string };
@@ -45,7 +46,7 @@ export default async function LocaleLayout({
       >
         {/**NextIntlClientProvider for client component */}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
     </html>
