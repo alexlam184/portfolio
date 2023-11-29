@@ -1,5 +1,6 @@
 "use client";
 import { SectionHeader } from "@/components/common/SectionHeader";
+import { ProjectsType } from "@/constant/type";
 import { Project } from "./Project";
 import styles from "./projects.module.scss";
 
@@ -17,135 +18,53 @@ export const Projects = () => {
   );
 };
 
-const projects = [
+const projects: ProjectsType = [
   {
-    title: "Paint.app",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Flutter", "MUI", "Python", "FastAPI"],
+    title: "Elma GPT",
+    imgSrc: "images/project-imgs/elmagpt.png",
+    code: "https://github.com/alexlam184/emla-chat-web",
+    youtube: "https://www.youtube.com/watch?v=h0caIp_1Eqk&t=43s",
+    projectLink: "https://emla-chat-web.vercel.app",
+    tech: ["Reactjs", "Typescript", "Live2D", "Microsoft Azure", "ChatGPT"],
     description:
-      "A real-time coaching app for students learning to paint. This app is my baby, designed and built on my own.",
+      "ElmaGPT, a hardware education web app, uses ChatGPT API and Azure Text-to-Voice. Its unique feature is a dynamic virtual teacher with a Live2D-generated avatar, enhancing engagement and learning.",
     modalContent: (
       <>
         <p>
-          Pain.app is a real-time coaching app for students learning to paint.
-          This app is my baby, designed and built on my own.
+          ElmaGPT revolutionizes hardware education with its interactive web
+          application featuring a virtual teacher powered by ChatGPT API and
+          Microsoft Azure Text-to-Voice. Students can effortlessly pose
+          questions on hardware topics through the chat interface, benefiting
+          from accurate and contextual responses. What sets ElmaGPT apart is its
+          incorporation of a dynamic virtual avatar generated using Live2D
+          technology. This animated companion adds a visually engaging element
+          to the learning experience, providing a friendly face to the virtual
+          teacher.
         </p>
         <p>
-          The tech stack is based on top of Flutter for the mobile app,
-          connected to a Python & FastAPI backend, with data stored in Postgres,
-          deployed on Heroku.
-        </p>
-        <p>
-          Because this isn&apos;t real, here&apos;s some gibberish to fill space{" "}
-          {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
+          The seamless integration of Live2D brings ElmaGPT to life, fostering a
+          more immersive and enjoyable educational journey. As students explore
+          the intricacies of hardware, the virtual avatar enhances their
+          connection with the material, making ElmaGPT a cutting-edge and
+          personable platform for mastering hardware concepts.
         </p>
       </>
     ),
   },
   {
-    title: "The Canvas Club",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Node", "Express", "Postgres", "Kafka", "Redis"],
+    title: "Car simulator website",
+    imgSrc: "images/project-imgs/carsim.png",
+    projectLink: "https://car-sim-web.vercel.app",
+    tech: ["Nextjs", "TailwindCSS"],
     description:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      "The Car Simulation Website showcases car simulators crafted from recycled scrap cars.",
     modalContent: (
       <>
         <p>
-          The Canvas Club is a social community for painters to connect with
-          others in their community.
-        </p>
-        <p>
-          I work primarily on the backend, a collection of Node & Express
-          microservices. Data is stored primarily in Postgres & cached in Redis.
-        </p>
-        <p>
-          The team in total consists of 5 developers. This is a passion project
-          for all of us.
-        </p>
-        <p>
-          Because this isn&apos;t real, here&apos;s some gibberish to fill space{" "}
-          {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "BrushWire",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["NextJS", "Java", "Spring", "AWS Aurora"],
-    description:
-      "Think Zapier but for paint. Built with a team of four college friends and scaled to > 1 billion requests per day. This was a fun one.",
-    modalContent: (
-      <>
-        <p>
-          Brush wire is essentially Zapier but for paint. Built with a team of
-          four college friends and scaled to {">"} 1 billion requests per day.
-          This was a fun one.
-        </p>
-        <p>
-          Since &quot;Zapier for paint&quot; doesn&apos;t mean anything, be
-          creative {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Paint Reference 4",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Python", "FastAPI", "SQLAlchemy"],
-    description:
-      "I couldn't think of another paint reference app, so here we are. I think you get the idea, right? Use your imagination 🌈",
-    modalContent: (
-      <>
-        <p>Alright, you got me. I&apos;m all out of paint references.</p>
-        <p>
-          Point is, use this space to explain a bit further WHAT this project
-          is, as well as what YOU contributed to it.
-        </p>
-        <p>You get the idea. Now more lorem {":)"}</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
+          The Car Simulation Website offers an immersive experience showcasing
+          car simulators crafted from recycled scrap cars. Explore the product
+          lineup and witness sustainable innovation in virtual driving using
+          repurposed automotive materials.
         </p>
       </>
     ),

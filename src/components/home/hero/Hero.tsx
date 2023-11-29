@@ -10,31 +10,26 @@ export const Hero = () => {
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
+        <h1 className={styles.title}>
+          Hey, I&apos;m {t("hero.name")}
+          <span>.</span>
+        </h1>
+
+        <h2 className={styles.subTitle}>
+          {t("hero.iam")}
+          <Reveal>
+            <span>{t("hero.title")}</span>
+          </Reveal>
+        </h2>
+
         <Reveal>
-          <h1 className={styles.title}>
-            Hey, I&apos;m {t("hero.name")}
-            <span>.</span>
-          </h1>
-        </Reveal>
-        <Reveal>
-          <h2 className={styles.subTitle}>
-            I&apos;m a <span>{t("hero.title")}</span>
-          </h2>
-        </Reveal>
-        <Reveal>
-          <p className={styles.aboutCopy}>
-            {/* I&apos;ve spent the last 3 years building and scaling software for
-            some pretty cool companies. I also teach people to paint online
-            (incase you&apos;ve got an empty canvas layin&apos; around 🎨).
-            Let&apos;s connect! */}
-            {t("hero.description")}
-          </p>
+          <p className={styles.aboutCopy}>{t("hero.description")}</p>
         </Reveal>
         <Reveal>
           <StandardButton
             onClick={() => document.getElementById("contact")?.scrollIntoView()}
           >
-            Contact me
+            {t("hero.contactme")}
           </StandardButton>
         </Reveal>
       </div>

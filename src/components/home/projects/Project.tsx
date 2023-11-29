@@ -1,19 +1,21 @@
 import { Reveal } from "@/components/common/Reveal";
+import { useDisclosure } from "@nextui-org/react";
 import { useAnimation, useInView, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
+import { AiFillGithub, AiOutlineExport, AiFillYoutube } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
 import styles from "./projects.module.scss";
 
 interface Props {
   modalContent: JSX.Element;
   description: string;
-  projectLink: string;
+  projectLink?: string;
   imgSrc: string;
   tech: string[];
   title: string;
-  code: string;
+  code?: string;
+  youtube?: string;
 }
 
 export const Project = ({
@@ -23,11 +25,12 @@ export const Project = ({
   imgSrc,
   title,
   code,
+  youtube,
   tech,
 }: Props) => {
   const [hovered, setHovered] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const controls = useAnimation();
 
@@ -57,7 +60,7 @@ export const Project = ({
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          onClick={() => setIsOpen(true)}
+          onClick={onOpen}
           className={styles.projectImage}
         >
           <img
@@ -75,13 +78,22 @@ export const Project = ({
               <h4>{title}</h4>
               <div className={styles.projectTitleLine} />
 
-              <Link href={code} target="_blank" rel="nofollow">
-                <AiFillGithub size="2.8rem" />
-              </Link>
+              {code && (
+                <Link href={code} target="_blank" rel="nofollow">
+                  <AiFillGithub size="2.8rem" />
+                </Link>
+              )}
+              {youtube && (
+                <Link href={youtube} target="_blank" rel="nofollow">
+                  <AiFillYoutube size="2.8rem" />
+                </Link>
+              )}
 
-              <Link href={projectLink} target="_blank" rel="nofollow">
-                <AiOutlineExport size="2.8rem" />
-              </Link>
+              {projectLink && (
+                <Link href={projectLink} target="_blank" rel="nofollow">
+                  <AiOutlineExport size="2.8rem" />
+                </Link>
+              )}
             </div>
           </Reveal>
           <Reveal>
@@ -89,8 +101,7 @@ export const Project = ({
           </Reveal>
           <Reveal>
             <p className={styles.projectDescription}>
-              {description}{" "}
-              <span onClick={() => setIsOpen(true)}>Learn more {">"}</span>
+              {description} <span onClick={onOpen}>Learn more {">"}</span>
             </p>
           </Reveal>
         </div>
@@ -98,7 +109,7 @@ export const Project = ({
       <ProjectModal
         modalContent={modalContent}
         projectLink={projectLink}
-        setIsOpen={setIsOpen}
+        onOpenChange={onOpenChange}
         isOpen={isOpen}
         imgSrc={imgSrc}
         title={title}

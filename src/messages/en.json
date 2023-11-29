@@ -12,11 +12,14 @@
   "IndexPage": {
     "hero": {
       "name": "Alex Lam",
+      "iam": "I'm a ",
       "title": "Full Stack Developer",
-      "description": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+      "description": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!",
+      "contactme": "Contact me"
     },
     "aboutme": {
-      "content": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+      "content1": "Hey! I'm Alex,graduated from HKUST Computer Science. if you haven't already gathered that by now. I specialize in the frontend, primarily reactjs and java, but love building with whatever tools are right for the job.",
+      "content2": "I am also a foolish person who starve for new stuff - technology ,news ,3D modeling ,boxing , basketball and bad jokes .He love learning in depth for topics and seeking more creative projects."
     }
   }
 }

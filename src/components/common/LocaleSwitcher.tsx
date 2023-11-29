@@ -30,7 +30,12 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <Tooltip placement={"right"} content={"right"} color="secondary">
+    <Tooltip
+      placement={"right"}
+      content={"Language 語言"}
+      color="default"
+      className="p-3 rounded-lg text-bold text-xl"
+    >
       <motion.button
         className="pt-2"
         initial={{ y: -30, opacity: 0 }}

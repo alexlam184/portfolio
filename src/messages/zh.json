@@ -12,11 +12,14 @@
   "IndexPage": {
     "hero": {
       "name": "Alex Lam",
-      "title": "全端工程師",
-      "description": "在過去的三年裡，我一直在為一些非常酷的公司建立和擴展軟體。 我還教學生STEM知識（科學與程式設計🤖）。 讓聯絡我吧！"
+      "iam": "我是一位",
+      "title": "全端軟體工程師",
+      "description": "在過去的三年裡，我一直在為一些非常酷的公司建立和擴展軟體。 我還教學生STEM知識（科學與程式設計🤖）。",
+      "contactme": "與我聯絡"
     },
     "aboutme": {
-      "content": "I've spent the last 3 years building and scaling software for some pretty cool companies. I also teach children to stem knowledge (science & programming 🤖). Let's connect!"
+      "content1": "嗨! 我是來自香港全端軟體工程師💻。小時侯一直希望成為會計師。但後來接觸到Lego🎮，我就知我骨子裏希望成為一位工程師，我希望建立一些有用東西(99%機率失敗💩... ≖_≖)，從此踏上制作者之路🧑‍💻。",
+      "content2": "作為一個好奇的人,我渴望了解不同的新事物 - 科技新聞, 3D建模, 拳擊, 籃球, 足球,還有不可缺少的笑話..."
     }
   }
 }
