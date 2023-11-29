@@ -3,27 +3,30 @@ import { Reveal } from "@/components/common/Reveal";
 import styles from "./contact.module.scss";
 import { AiFillMail } from "react-icons/ai";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const Contact = () => {
+  const t = useTranslations("IndexPage");
   return (
     <section className="section-wrapper" id="contact">
       <div className={styles.contactWrapper}>
         <Reveal width="100%">
           <h4 className={styles.contactTitle}>
-            Contact<span>.</span>
+            {t("contact.header")}
+            <span>.</span>
           </h4>
         </Reveal>
         <Reveal width="100%">
           <p className={styles.contactCopy}>
-            Shoot me an email if you want to connect! You can also find me on{" "}
+            {t("contact.description1")}
             <Link
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/alex-lam-724992152/"
               target="_blank"
               rel="nofollow"
             >
               Linkedin
-            </Link>{" "}
-            if that&apos;s more your speed.
+            </Link>
+            {t("contact.description2")}
           </p>
         </Reveal>
         <Reveal width="100%">

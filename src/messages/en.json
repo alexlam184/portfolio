@@ -2,8 +2,12 @@
   "LocaleLayout": {
     "title": "Alex - Real life story writer"
   },
-  "nav": {
-    "about": "about"
+  "Topbar": { "resume": "My Resume" },
+  "Navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Exp.",
+    "contact": "Contact"
   },
   "NotFoundPage": {
     "title": "Page not found",
@@ -18,8 +22,20 @@
       "contactme": "Contact me"
     },
     "aboutme": {
+      "header": "About",
       "content1": "Hey! I'm Alex,graduated from HKUST Computer Science. if you haven't already gathered that by now. I specialize in the frontend, primarily reactjs and java, but love building with whatever tools are right for the job.",
       "content2": "I am also a foolish person who starve for new stuff - technology ,news ,3D modeling ,boxing , basketball and bad jokes .He love learning in depth for topics and seeking more creative projects."
+    },
+    "projects": {
+      "header": "Projects"
+    },
+    "experience": {
+      "header": "Experience"
+    },
+    "contact": {
+      "header": "Contact",
+      "description1": "Shoot me an email if you want to connect! You can also find me on",
+      "description2": " if that's more your speed."
     }
   }
 }

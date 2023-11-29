@@ -9,4 +9,13 @@ export type ProjectsType = {
   tech: string[];
   description: string;
   modalContent: JSX.Element;
-}[];
+};
+
+export type ExperienceType = {
+  title: string;
+  position: string;
+  time: string;
+  location: string;
+  description: string;
+  tech: string[];
+};

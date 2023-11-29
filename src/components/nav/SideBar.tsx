@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import styles from "./sidebar.module.scss";
 import { motion } from "framer-motion";
 import LocaleSwitcher from "../common/LocaleSwitcher";
+import { useTranslations } from "next-intl";
 
 export const SideBar = () => {
   const [selected, setSelected] = useState("");
+  const t = useTranslations("Navbar");
 
   useEffect(() => {
     const sections = document.querySelectorAll(".section-wrapper");
@@ -35,7 +37,7 @@ export const SideBar = () => {
       className={styles.sideBar}
     >
       <span className={styles.logo}>
-        B<span>.</span>
+        AL<span>.</span>
       </span>
       <motion.a
         initial={{ x: -70 }}
@@ -47,7 +49,7 @@ export const SideBar = () => {
         }}
         className={selected === "about" ? styles.selected : ""}
       >
-        About
+        {t("about")}
       </motion.a>
       <motion.a
         initial={{ x: -70 }}
@@ -57,7 +59,7 @@ export const SideBar = () => {
         onClick={() => setSelected("projects")}
         className={selected === "projects" ? styles.selected : ""}
       >
-        Projects
+        {t("projects")}
       </motion.a>
       <motion.a
         initial={{ x: -70 }}
@@ -67,7 +69,7 @@ export const SideBar = () => {
         onClick={() => setSelected("experience")}
         className={selected === "experience" ? styles.selected : ""}
       >
-        Exp.
+        {t("experience")}
       </motion.a>
       <motion.a
         initial={{ x: -70 }}
@@ -77,7 +79,7 @@ export const SideBar = () => {
         onClick={() => setSelected("contact")}
         className={selected === "contact" ? styles.selected : ""}
       >
-        Contact
+        {t("contact")}
       </motion.a>
 
       <LocaleSwitcher />

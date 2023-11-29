@@ -11,7 +11,7 @@ export const About = () => {
   const t = useTranslations("IndexPage");
   return (
     <section id="about" className="section-wrapper">
-      <SectionHeader title="About" dir="l" />
+      <SectionHeader title={t("aboutme.header")} dir="l" />
       <div className={styles.about}>
         <div>
           <Reveal>

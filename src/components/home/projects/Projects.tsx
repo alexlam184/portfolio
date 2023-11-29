@@ -1,13 +1,15 @@
 "use client";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { ProjectsType } from "@/constant/type";
+import { useTranslations } from "next-intl";
 import { Project } from "./Project";
 import styles from "./projects.module.scss";
 
 export const Projects = () => {
+  const t = useTranslations("IndexPage");
   return (
     <section className="section-wrapper" id="projects">
-      <SectionHeader title="Projects" dir="r" />
+      <SectionHeader title={t("projects.header")} dir="r" />
 
       <div className={styles.projects}>
         {projects.map((project) => {
@@ -18,7 +20,7 @@ export const Projects = () => {
   );
 };
 
-const projects: ProjectsType = [
+const projects: ProjectsType[] = [
   {
     title: "Elma GPT",
     imgSrc: "images/project-imgs/elmagpt.png",
