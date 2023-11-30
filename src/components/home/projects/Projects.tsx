@@ -25,7 +25,6 @@ const projects: ProjectsType[] = [
     title: "Elma GPT",
     imgSrc: "images/project-imgs/elmagpt.png",
     code: "https://github.com/alexlam184/emla-chat-web",
-    youtube: "https://www.youtube.com/watch?v=h0caIp_1Eqk&t=43s",
     projectLink: "https://emla-chat-web.vercel.app",
     tech: ["Reactjs", "Typescript", "Live2D", "Microsoft Azure", "ChatGPT"],
     description:
