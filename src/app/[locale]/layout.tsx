@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
 import { Providers } from "@/app/providers";
+import { Analytics } from "@vercel/analytics/react";
 type Props = {
   children: ReactNode;
   params: { locale: string };
@@ -46,7 +47,10 @@ export default async function LocaleLayout({
       >
         {/**NextIntlClientProvider for client component */}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>{children}</Providers>
+          <Providers>
+            {children}
+            <Analytics />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>
