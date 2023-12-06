@@ -6,8 +6,8 @@
   padding: 1.2rem 2.4rem;
 
   border: 1px solid var(--brand);
-  background: transparent;
-  color: var(--brand);
+  background: var(--brand);
+  color: var(--background);
   font-size: var(--text-sm);
   border-radius: 4px;
 
@@ -23,7 +23,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  background: var(--brand);
+  background: var(--background);
 
   height: 100%;
   width: 100%;
@@ -31,11 +31,13 @@
   left: -100%;
   top: -100%;
 
-  transition: 0.2s left, 0.2s top;
+  transition:
+    0.2s left,
+    0.2s top;
 }
 
 .outlineButton:hover {
-  color: var(--background-dark);
+  color: var(--brand);
 }
 
 .outlineButton:hover::before {
