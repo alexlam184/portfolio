@@ -7,6 +7,7 @@ import { Heading } from "@/components/nav/Heading";
 import { SideBar } from "@/components/nav/SideBar";
 import { unstable_setRequestLocale } from "next-intl/server";
 import styles from "./home.module.scss";
+import Loading from "./loading";
 
 export default function Index({
   params: { locale },

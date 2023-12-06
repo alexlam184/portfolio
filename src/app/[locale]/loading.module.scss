@@ -1,0 +1,58 @@
+.loader {
+  font-size: 80px;
+  display: inline;
+}
+
+.loader span {
+  display: inline-block;
+  color: var(--brand);
+  animation: bounce 1.5s infinite alternate;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loader span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loader span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.loader span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.loader span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.loader span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-50px);
+  }
+  60% {
+    transform: translateY(-25px);
+  }
+}

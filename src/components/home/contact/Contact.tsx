@@ -23,6 +23,7 @@ export const Contact = () => {
               href="https://www.linkedin.com/in/alex-lam-724992152/"
               target="_blank"
               rel="nofollow"
+              className="mx-1"
             >
               Linkedin
             </Link>
